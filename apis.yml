@@ -1,17 +1,45 @@
 aid: romtech
 name: ROMTech
-description: 'ROMTech is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'ROMTech (ROM Technologies, Inc.) is a privately held medical technology
+  company headquartered in Brookfield, Connecticut that builds connected orthopedic
+  rehabilitation technology. Its flagship product, the PortableConnect Adaptive Telemed
+  Technology, is a prescription, clinician-delivered home rehabilitation device for
+  patients recovering from total knee replacement, total hip replacement, joint manipulation
+  and ACL repair. Adaptive pedal technology adjusts automatically to a patient''s current
+  range of motion across four therapy modes (passive, active-assisted, active and resistance);
+  the AccuAngle Bluetooth wearable measures knee flexion and extension during each
+  session; and the PortableConnect App runs a prescribed protocol of three to five
+  daily sessions over a typical four-to-eight-week plan. Session data — range of motion,
+  adherence and key health metrics — streams to a Clinician Portal where the prescribing
+  surgeon reviews real-time reports and adjusts the protocol remotely, with in-app
+  telemedicine for face-to-face follow-ups. The technology began as the ROM3 Rehab
+  device. ROMTech was named to Fast Company''s Most Innovative Companies list for 2025
+  and to the LexisNexis Top 100 Global Innovators for 2026, and sells to clinicians,
+  health systems and the Department of Veterans Affairs. ROMTech runs no public developer
+  program: it publishes no OpenAPI, SDK, webhook catalog or developer documentation,
+  and the Clinician Portal at portal.romtech.com is a closed single-page application
+  backed by a private, undocumented API at middleware.romtech.com/api.'
 url: https://raw.githubusercontent.com/api-evangelist/romtech/refs/heads/main/apis.yml
+image: https://romtech.com/wp-content/themes/romtech2021/img/logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profile
+x-tier-reason: identity-enriched-no-developer-program
+specificationVersion: '0.23'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Healthcare
+- Medical Devices
+- Rehabilitation
+- Physical Therapy
+- Telemedicine
+- Remote Patient Monitoring
+- Orthopedics
+- Digital Health
+- Connected Devices
+- Wearables
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +47,84 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/romtech-domain-security.yml
 - type: Website
+  url: https://romtech.com/
+- type: About
+  url: https://romtech.com/about-romtech/
+- type: Product
+  url: https://romtech.com/portableconnect/
+- type: Blog
+  url: https://romtech.com/news/
+- type: BlogRSS
+  url: https://romtech.com/feed/
+- type: PressReleases
+  url: https://romtech.com/press-releases/
+- type: MediaRoom
+  url: https://romtech.com/romtech-media-room/
+- type: Support
+  url: https://romtech.com/contact-us/
+- type: FAQ
+  url: https://romtech.com/frequently-asked-questions/
+- type: PrivacyPolicy
+  url: https://romtech.com/privacy-policy/
+- type: TermsOfService
+  url: https://romtech.com/terms/
+- type: Patents
+  url: https://romtech.com/patents/
+- type: Careers
+  url: https://www.paycomonline.net/v4/ats/web.php/portal/74B8425BF3D1B3ACB19CC1353DC5FA0E/career-page
+- type: ClinicianPortal
+  url: https://portal.romtech.com/
+- type: GovernmentPurchasing
+  url: https://romtech.com/veterans-affairs-purchasing/
+- type: SecondaryMarket
   url: https://www.hiive.com/securities/romtech-stock
+- type: LinkedIn
+  url: https://www.linkedin.com/company/romtechnologies
+- type: Twitter
+  url: https://twitter.com/ROMTechnologies
+- type: YouTube
+  url: https://www.youtube.com/channel/UC0WlP8_td5Liz0Wq-TvdZ5Q
+- type: Instagram
+  url: https://www.instagram.com/romtech_rehab/
+- type: LLMsTxt
+  url: llms/romtech-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: ROMTech ships real connected software — the PortableConnect device app, the
+    AccuAngle wearable and a React Clinician Portal at portal.romtech.com — but only
+    as a prescription end-user product, and the portal's own JavaScript bundle names
+    its backend as a private, undocumented API at https://middleware.romtech.com/api/
+    that answers HTTP 500 on every discovery path (/swagger/v1/swagger.json,
+    /openapi.json, /.well-known/*) while returning {"success":true,"data":"az-middleware"}
+    on /api, so there is no published contract, SDK, or developer portal to catalog.
+  evidence:
+  - url: https://romtech.com/openapi.json
+    status: 404
+  - url: https://romtech.com/.well-known/agent-card.json
+    status: 404
+  - url: https://romtech.com/graphql
+    status: 404
+  - url: https://romtech.com/llms.txt
+    status: 200
+  - url: https://romtech.com/wp-json/
+    status: 200
+  - url: https://portal.romtech.com/openapi.json
+    status: 200
+  - url: https://middleware.romtech.com/api/
+    status: 200
+  - url: https://middleware.romtech.com/swagger/v1/swagger.json
+    status: 500
+  - url: https://connect.romtech.com/
+    status: 200
+  - url: https://api.github.com/orgs/romtech
+    status: 404
+  checked: '2026-08-26'

@@ -1,0 +1,95 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Live unauthenticated GET of each /.well-known/ path on every ROMTech host
+  discovered in this pass — the marketing/WordPress origin (romtech.com), the
+  ROMTech Clinician Portal SPA (portal.romtech.com), and the private portal
+  backend (middleware.romtech.com) named in the portal's JavaScript bundle.
+note: >-
+  Every probed path missed, on all three hosts, for three different reasons.
+  romtech.com is WordPress and returns its themed 404 page (HTTP 404,
+  text/html, ~85KB) for every /.well-known/ path. portal.romtech.com is a
+  Vite/React single-page app with a catch-all route: it answers HTTP 200 with
+  the same 868-byte index.html shell for EVERY path probed, including
+  /openapi.json — this is the SPA-shell false positive the pipeline warns
+  about, and it is recorded here as a miss (shell: true), not a hit.
+  middleware.romtech.com is reachable but returns HTTP 500 with the JSON body
+  {"success":false,"data":"Unhandled exception."} for every path except /api,
+  which returns {"success":true,"data":"az-middleware"} — the host serves no
+  discovery document. No WellKnown and no SecurityTxt pointer is emitted in
+  apis.yml: this file records an absence, not a served surface.
+hosts:
+- host: romtech.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: portal.romtech.com
+  note: >-
+    SPA catch-all. Every status below is a 200 returning the identical
+    868-byte text/html application shell, not a document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    shell: true
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    shell: true
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    shell: true
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    shell: true
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    shell: true
+    file: null
+- host: middleware.romtech.com
+  note: >-
+    Reachable API host for the Clinician Portal. Returns HTTP 500 with a JSON
+    error envelope for every path except /api.
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 500
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+    file: null
+  - path: /.well-known/api-catalog
+    status: 500
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 500
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 500
+    file: null
+  - path: /.well-known/agent.json
+    status: 500
+    file: null
