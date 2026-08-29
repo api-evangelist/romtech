@@ -20,6 +20,17 @@ description: 'ROMTech (ROM Technologies, Inc.) is a privately held medical techn
   and the Clinician Portal at portal.romtech.com is a closed single-page application
   backed by a private, undocumented API at middleware.romtech.com/api.'
 url: https://raw.githubusercontent.com/api-evangelist/romtech/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://romtech.com/wp-content/themes/romtech2021/img/logo.png
 x-type: company
 x-source: harvest:secondary-market
