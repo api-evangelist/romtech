@@ -9,11 +9,11 @@
       "method": "discovered"
     },
     {
-      "source": "https://romtech.com/portableconnect/",
-      "feed_url": "https://romtech.com/portableconnect/blog/feed/",
+      "source": "https://romtech.com/feed/",
+      "feed_url": "https://romtech.com/feed/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://romtech.com/news/feed/",
@@ -28,15 +28,8 @@
       "title": "",
       "saved": 0,
       "method": "feed"
-    },
-    {
-      "source": "https://romtech.com/feed/",
-      "feed_url": "https://romtech.com/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed"
     }
   ],
   "post_count": 18,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
