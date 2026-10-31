@@ -64,5 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ROMTech is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/romtech-stock
+ROMTech (ROM Technologies, Inc.) is a privately held medical technology company headquartered in Brookfield, Connecticut that builds connected orthopedic rehabilitation technology. Its flagship product, the PortableConnect Adaptive Telemed Technology, is a prescription, clinician-delivered home rehabilitation device for patients recovering from total knee replacement, total hip replacement, joint manipulation and ACL repair. Adaptive pedal technology adjusts automatically to a patient's current range of motion across four therapy modes (passive, active-assisted, active and resistance); the AccuAngle Bluetooth wearable measures knee flexion and extension during each session; and the PortableConnect App runs a prescribed protocol of three to five daily sessions over a typical four-to-eight-week plan. Session data — range of motion, adherence and key health metrics — streams to a Clinician Portal where the prescribing surgeon reviews real-time reports and adjusts the protocol remotely, with in-app telemedicine for face-to-face follow-ups. The technology began as the ROM3 Rehab device. ROMTech was named to Fast Company's Most Innovative Companies list for 2025 and to the LexisNexis Top 100 Global Innovators for 2026, and sells to clinicians, health systems and the Department of Veterans Affairs. ROMTech runs no public developer program: it publishes no OpenAPI, SDK, webhook catalog or developer documentation, and the Clinician Portal at portal.romtech.com is a closed single-page application backed by a private, undocumented API at middleware.romtech.com/api.
+
+**Areas:** Company · Healthcare · Medical Devices · Rehabilitation · Physical Therapy · Telehealth · Remote Patient Monitoring · Orthopedics · Digital Health · Connected Devices · Wearables
+
+## ROMTech on APIs.io
+
+Everything profiled for ROMTech is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/romtech/](https://apis.io/providers/romtech/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Romtech Domain Security](https://apis.io/security/romtech/romtech-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://romtech.com/)
+- [Support](https://romtech.com/contact-us/)
+- [Blog](https://romtech.com/news/)
+- [Terms of service](https://romtech.com/terms/)
+- [Privacy policy](https://romtech.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 11.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.9** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/romtech/](https://apis.io/providers/romtech/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ROMTech: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/romtech/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
